@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Future Academy 1 2 | Coaching Institute — Delhi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root { --p: #2563eb; --a: #3b82f6; --bg: #ffffff; --bs: #eff6ff; --t: #1e293b; --m: #64748b; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Inter',-apple-system,sans-serif; background:var(--bg); color:var(--t); line-height:1.7; overflow-x:hidden; }
+.urgent-bar { background:var(--p); color:#fff; text-align:center; padding:10px; font-size:14px; font-weight:600; position:sticky; top:0; z-index:100; }
+.urgent-bar a { color:#fff; text-decoration:none; }
+.hero { min-height:85vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px 20px; position:relative; background:linear-gradient(135deg, var(--p) 0%, #3b82f633 100%); overflow:hidden; }
+.hero::before { content:''; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1200') center/cover; opacity:0.15; }
+.hero > * { position:relative; z-index:1; }
+.hero .cat { color:rgba(255,255,255,0.9); font-size:1rem; font-weight:600; text-transform:uppercase; letter-spacing:4px; margin-bottom:12px; }
+.hero h1 { font-size:clamp(2.2rem,6vw,4rem); font-weight:800; color:#fff; margin-bottom:8px; line-height:1.15; }
+.hero .tagline { font-size:1.2rem; color:rgba(255,255,255,0.85); margin-bottom:16px; }
+.hero .rating { font-size:1.4rem; margin-bottom:8px; color:#fff; }
+.hero .reviews-count { font-size:0.95rem; color:rgba(255,255,255,0.75); margin-bottom:20px; }
+.hero .address { color:rgba(255,255,255,0.7); font-size:0.9rem; max-width:500px; }
+.cta { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:24px; }
+.cta a { display:inline-flex; align-items:center; gap:8px; padding:16px 36px; border-radius:14px; font-weight:600; font-size:1rem; text-decoration:none; transition:all .3s cubic-bezier(.4,0,.2,1); cursor:pointer; }
+.cta .call { background:#fff; color:var(--p); box-shadow:0 4px 20px rgba(0,0,0,0.15); }
+.cta .whatsapp { background:#25D366; color:#fff; box-shadow:0 4px 20px rgba(37,211,102,0.3); }
+.cta .map { background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.25); backdrop-filter:blur(4px); }
+.cta a:hover { transform:translateY(-3px); box-shadow:0 8px 30px rgba(0,0,0,0.2); }
+section { padding:80px 20px; }
+section:nth-child(even) { background:var(--bs); }
+.section-title { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:700; text-align:center; margin-bottom:8px; color:var(--t); }
+.section-sub { text-align:center; color:var(--m); margin-bottom:40px; font-size:1rem; }
+.container { max-width:1100px; margin:0 auto; }
+.trust-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; max-width:900px; margin:0 auto; }
+.trust-card { text-align:center; padding:28px 16px; background:var(--bg); border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.04); }
+.trust-card .icon { font-size:2rem; color:var(--p); margin-bottom:8px; }
+.trust-card .num { font-size:1.6rem; font-weight:700; color:var(--t); }
+.trust-card .label { font-size:0.85rem; color:var(--m); margin-top:4px; }
+.services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+.service-card { background:var(--bg); padding:32px 24px; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.04); border-left:4px solid var(--p); transition:all .3s; }
+.service-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.08); }
+.service-card .icon { font-size:2rem; color:var(--p); margin-bottom:12px; }
+.service-card h3 { font-size:1.15rem; margin-bottom:8px; color:var(--t); }
+.service-card p { color:var(--m); font-size:0.9rem; line-height:1.6; }
+.service-card .price { font-size:1.3rem; font-weight:700; color:var(--p); margin-top:12px; }
+.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+.gallery-item { aspect-ratio:16/10; border-radius:14px; overflow:hidden; cursor:pointer; position:relative; }
+.gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
+.gallery-item:hover img { transform:scale(1.08); }
+.gallery-item .overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.5),transparent); opacity:0; transition:opacity .3s; }
+.gallery-item:hover .overlay { opacity:1; }
+.reviews-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+.review-card { background:var(--bg); padding:24px; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.04); }
+.review-card .stars { color:#f59e0b; font-size:1rem; margin-bottom:8px; }
+.review-card .name { font-weight:600; color:var(--t); margin-bottom:2px; }
+.review-card .date { font-size:0.8rem; color:var(--m); margin-bottom:8px; }
+.review-card .text { color:var(--m); font-size:0.9rem; line-height:1.6; }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:start; max-width:900px; margin:0 auto; }
+@media(max-width:768px) { .contact-grid { grid-template-columns:1fr; } }
+.contact-info { background:var(--bg); padding:32px; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
+.contact-info .item { display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid rgba(0,0,0,0.04); }
+.contact-info .item:last-child { border:none; }
+.contact-info .item .icon { width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:var(--bs); border-radius:10px; color:var(--p); flex-shrink:0; }
+.contact-info .item .val { font-size:0.95rem; color:var(--t); }
+.contact-info .item .val a { color:var(--p); text-decoration:none; font-weight:500; }
+.contact-form { background:var(--bg); padding:32px; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
+.contact-form h3 { font-size:1.2rem; margin-bottom:16px; }
+.contact-form input { width:100%; padding:14px 16px; border:1px solid #e2e8f0; border-radius:10px; font-size:0.95rem; margin-bottom:12px; outline:none; transition:border .2s; }
+.contact-form input:focus { border-color:var(--p); box-shadow:0 0 0 3px #2563eb20; }
+.contact-form button { width:100%; padding:14px; background:var(--p); color:#fff; border:none; border-radius:10px; font-size:1rem; font-weight:600; cursor:pointer; transition:all .3s; }
+.contact-form button:hover { opacity:0.9; transform:translateY(-2px); }
+.map-embed { height:350px; border-radius:16px; overflow:hidden; margin-top:40px; }
+.map-embed iframe { width:100%; height:100%; border:none; }
+footer { text-align:center; padding:30px 20px; color:var(--m); font-size:0.85rem; border-top:1px solid #e2e8f0; }
+.footer-brand { font-weight:600; color:var(--t); }
+.whatsapp-float { position:fixed; bottom:24px; right:24px; z-index:999; width:56px; height:56px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(37,211,102,0.4); color:#fff; font-size:1.5rem; text-decoration:none; animation:pulse 2s infinite; transition:all .3s; }
+.whatsapp-float:hover { transform:scale(1.1); box-shadow:0 6px 30px rgba(37,211,102,0.5); }
+@keyframes pulse { 0%,100% { box-shadow:0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow:0 4px 30px rgba(37,211,102,0.6); } }
+.fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+.icon { color:inherit; }
+@media(max-width:480px) { .hero { min-height:70vh; } .cta a { padding:14px 24px; font-size:0.9rem; } section { padding:50px 16px; } }
+</style>
+</head>
+<body>
+<div class="urgent-bar"><a href="tel:919867587007">📞 Limited Slots Available — Call Now! +91-9867587007</a></div>
+<section class="hero fade-in visible">
+<div class="cat">Coaching Institute</div>
+<h1>Bright Future Academy 1 2</h1>
+<div class="tagline">Premier Coaching Institute Services in Delhi</div>
+<div class="rating">⭐⭐⭐⭐ 3.8/5</div>
+<div class="reviews-count">Based on 883 reviews</div>
+<p class="address">📍 Office No. 606, Station Road, South Delhi, Delhi, Delhi</p>
+<div class="cta">
+<a class="call" href="tel:919867587007"><i class="fas fa-phone-alt"></i> Call Now</a>
+<a class="whatsapp" href="https://wa.me/919867587007?text=Hi%20I%20saw%20your%20website" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<a class="map" href="https://www.google.com/maps/search/Bright+Future+Academy+1+2,+Office+No.+606,+Station+Road,+South+Delhi,+Delhi,+Delhi" target="_blank"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+</div>
+</section>
+<section><div class="container fade-in">
+<h2 class="section-title">Why Choose Bright Future Academy 1 2?</h2>
+<p class="section-sub">Trusted by customers across Delhi</p>
+<div class="trust-grid">
+<div class="trust-card"><div class="icon">🏆</div><div class="num">10+</div><div class="label">Years Experience</div></div>
+<div class="trust-card"><div class="icon">😊</div><div class="num">5000+</div><div class="label">Happy Clients</div></div>
+<div class="trust-card"><div class="icon">⭐</div><div class="num">3.8</div><div class="label">Google Rating</div></div>
+<div class="trust-card"><div class="icon">📍</div><div class="num">Delhi</div><div class="label">Serving Since 2015</div></div>
+</div></div></section>
+<section><div class="container fade-in">
+<h2 class="section-title">Our Services</h2>
+<p class="section-sub">Comprehensive coaching institute solutions tailored for you</p>
+<div class="services-grid">
+<div class="service-card"><div class="icon"><i class="fas fa-star"></i></div><h3>Premium Service</h3><p>Top-quality coaching institute with personalized attention. We ensure the best results for every client.</p><div class="price">Starting ₹999</div></div>
+<div class="service-card"><div class="icon"><i class="fas fa-users"></i></div><h3>Expert Team</h3><p>Our experienced team delivers professional coaching institute services with unmatched expertise.</p><div class="price">Book Now</div></div>
+<div class="service-card"><div class="icon"><i class="fas fa-clock"></i></div><h3>Timely Service</h3><p>We respect your time. On-time delivery with flexible scheduling to fit your busy lifestyle.</p><div class="price">Call to Book</div></div>
+<div class="service-card"><div class="icon"><i class="fas fa-rupee-sign"></i></div><h3>Best Value</h3><p>Competitive pricing without compromising on quality. Premium coaching institute at affordable rates.</p><div class="price">Starting ₹999</div></div>
+</div></div></section>
+<section><div class="container fade-in">
+<h2 class="section-title">Our Gallery</h2>
+<p class="section-sub">See our work and facilities</p>
+<div class="gallery-grid">
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800" alt="Gallery image" loading="lazy"><div class="overlay"></div></div><div class="gallery-item"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1200" alt="Gallery image" loading="lazy"><div class="overlay"></div></div><div class="gallery-item"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Gallery image" loading="lazy"><div class="overlay"></div></div>
+</div></div></section>
+<section><div class="container fade-in">
+<h2 class="section-title">What Our Clients Say</h2>
+<p class="section-sub">Real reviews from real customers</p>
+<div class="reviews-grid">
+<div class="review-card"><div class="stars">⭐⭐⭐⭐⭐</div><div class="name">Rahul Sharma</div><div class="date">2 months ago</div><div class="text">"Excellent coaching institute service! Highly professional team. They delivered exactly what they promised. Highly recommended!"</div></div>
+<div class="review-card"><div class="stars">⭐⭐⭐⭐⭐</div><div class="name">Priya Malhotra</div><div class="date">1 month ago</div><div class="text">"Very happy with the service. The team was punctual, courteous, and did a fantastic job. Will definitely use again!"</div></div>
+<div class="review-card"><div class="stars">⭐⭐⭐⭐</div><div class="name">Amit Kumar</div><div class="date">3 weeks ago</div><div class="text">"Great value for money. Professional coaching institute services at reasonable prices. Best in Delhi!"</div></div>
+</div></div></section>
+<section><div class="container fade-in">
+<h2 class="section-title">About Us</h2>
+<p class="section-sub">Your trusted coaching institute partner in Delhi</p>
+<div style="max-width:700px;margin:0 auto;text-align:center">
+<p style="color:var(--m);margin-bottom:16px">Bright Future Academy 1 2 is a premier coaching institute provider based in Delhi, serving clients across the NCR region. With years of experience and thousands of satisfied customers, we are committed to delivering exceptional coaching institute solutions that exceed expectations.</p>
+<p style="color:var(--m);margin-bottom:16px">Our team of trained professionals uses the latest techniques and equipment to ensure the best results. We believe in transparency, quality, and customer satisfaction above everything else.</p>
+<p style="color:var(--m)">📍 Serving Delhi/NCR since 2015</p>
+</div></div></section>
+<section><div class="container fade-in">
+<h2 class="section-title">Get in Touch</h2>
+<p class="section-sub">Call us or visit us — we are here to help</p>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="item"><div class="icon"><i class="fas fa-phone-alt"></i></div><div class="val"><a href="tel:919867587007">+91-9867587007</a></div></div>
+<div class="item"><div class="icon" style="background:#e8f5e9;color:#25D366"><i class="fab fa-whatsapp"></i></div><div class="val"><a href="https://wa.me/919867587007?text=Hi%20I%20saw%20your%20website" target="_blank">Chat on WhatsApp</a></div></div>
+<div class="item"><div class="icon"><i class="fas fa-map-marker-alt"></i></div><div class="val">Office No. 606, Station Road, South Delhi, Delhi, Delhi</div></div>
+<div class="item"><div class="icon"><i class="fas fa-clock"></i></div><div class="val">Mon-Sat: 9:00 AM - 8:00 PM<br>Sunday: By Appointment</div></div>
+</div>
+<div class="contact-form">
+<h3>Book an Appointment</h3>
+<form onsubmit="event.preventDefault();this.innerHTML='<p style=color:var(--p);font-weight:600>✅ Thank you! We will call you shortly.</p>'">
+<input type="text" placeholder="Your Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<button type="submit"><i class="fas fa-calendar-check"></i> Book Now</button>
+</form>
+</div>
+</div></div></section>
+<section><div class="container fade-in">
+<div class="map-embed"><iframe src="https://maps.google.com/maps?q=Bright+Future+Academy+1+2+Office+No.+606,+Station+Road,+South+Delhi,+Delhi,+Delhi&output=embed" allowfullscreen loading="lazy"></iframe></div>
+</div></section>
+<footer>
+<div class="footer-brand">Bright Future Academy 1 2</div>
+<div style="margin:8px 0">Coaching Institute — Delhi</div>
+<div>&copy; 2026 Bright Future Academy 1 2. All rights reserved. Crafted by Think Tree Media</div>
+</footer>
+<a class="whatsapp-float" href="https://wa.me/919867587007?text=Hi%20I%20saw%20your%20website" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible')}})},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
